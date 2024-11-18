@@ -62,7 +62,7 @@ def send_email(subject, body, to_email, from_email, from_password):
 
 # Function to track price in the background
 def track_price_from_db(id, product_link, target_price, user_email, from_email, from_password):
-    check_interval = 3000  # Check every hour
+    check_interval = 3600  # Check every hour
     while True:
         current_price = get_price(product_link)
         if current_price is not None:
